@@ -1,0 +1,241 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:shacl="http://www.w3.org/ns/shacl#">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#minCount -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#minCount"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#nodeKind -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#nodeKind"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#path -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#path"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#property -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#property"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#targetClass -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/shacl#targetClass"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#NodeShape -->
+
+
+    <Class rdf:about="http://www.w3.org/ns/shacl#NodeShape"/>
+    
+
+
+    <!-- http://www.w3.org/ns/shacl#PropertyShape -->
+
+
+    <Class rdf:about="http://www.w3.org/ns/shacl#PropertyShape"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://example.com/OrganizationShape -->
+
+
+    <NamedIndividual rdf:about="http://example.com/OrganizationShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:property rdf:resource="http://example.com/requiredHomePage"/>
+        <shacl:property rdf:resource="http://example.com/requiredMember"/>
+        <shacl:property rdf:resource="http://example.com/requiredName"/>
+        <shacl:targetClass rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/PersonShape -->
+
+
+    <NamedIndividual rdf:about="http://example.com/PersonShape">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape"/>
+        <shacl:property rdf:resource="http://example.com/optionalHomePage"/>
+        <shacl:property rdf:resource="http://example.com/optionalNick"/>
+        <shacl:property rdf:resource="http://example.com/requiredFamilyName"/>
+        <shacl:property rdf:resource="http://example.com/requiredGivenName"/>
+        <shacl:property rdf:resource="http://example.com/requiredImg"/>
+        <shacl:property rdf:resource="http://example.com/requiredMbox"/>
+        <shacl:targetClass rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/optionalHomePage -->
+
+
+    <NamedIndividual rdf:about="http://example.com/optionalHomePage">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:path rdf:resource="http://xmlns.com/foaf/0.1/homepage"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/optionalNick -->
+
+
+    <NamedIndividual rdf:about="http://example.com/optionalNick">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://xmlns.com/foaf/0.1/nick"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/requiredFamilyName -->
+
+
+    <NamedIndividual rdf:about="http://example.com/requiredFamilyName">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://xmlns.com/foaf/0.1/family_name"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/requiredGivenName -->
+
+
+    <NamedIndividual rdf:about="http://example.com/requiredGivenName">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="en">given name</rdfs:label>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://xmlns.com/foaf/0.1/givenName"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/requiredHomePage -->
+
+
+    <NamedIndividual rdf:about="http://example.com/requiredHomePage">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="en">given name</rdfs:label>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:path rdf:resource="http://xmlns.com/foaf/0.1/homepage"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/requiredImg -->
+
+
+    <NamedIndividual rdf:about="http://example.com/requiredImg">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:path rdf:resource="http://xmlns.com/foaf/0.1/img"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/requiredMbox -->
+
+
+    <NamedIndividual rdf:about="http://example.com/requiredMbox">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:path rdf:resource="http://xmlns.com/foaf/0.1/mbox"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/requiredMember -->
+
+
+    <NamedIndividual rdf:about="http://example.com/requiredMember">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="en">given name</rdfs:label>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+        <shacl:path rdf:resource="http://xmlns.com/foaf/0.1/member"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://example.com/requiredName -->
+
+
+    <NamedIndividual rdf:about="http://example.com/requiredName">
+        <rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape"/>
+        <rdfs:label xml:lang="en">given name</rdfs:label>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
+        <shacl:path rdf:resource="http://xmlns.com/foaf/0.1/name"/>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

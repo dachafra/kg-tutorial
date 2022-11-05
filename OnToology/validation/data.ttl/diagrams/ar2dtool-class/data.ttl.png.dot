@@ -1,0 +1,14 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"https://kuleuven.be" -> "http://davidchavesfraga.com" [ label = "foaf:member" ];
+	"https://kuleuven.be" -> "https://kuleuven.be" [ label = "foaf:homepage" ];
+	"http://davidchavesfraga.com" -> "http://davidchavesfraga.com/assets/images/dchaves.jpg" [ label = "foaf:img" ];
+	"http://davidchavesfraga.com" -> "http://davidchavesfraga.com" [ label = "foaf:homepage" ];
+	"http://davidchavesfraga.com" -> "http://www.upm.es/observatorio/vi/index.jsp?pageac=investigador.jsp&idInvestigador=26568" [ label = "foaf:homepage" ];
+	"http://davidchavesfraga.com" -> "https://www.kuleuven.be/wieiswie/en/person/00152642" [ label = "foaf:homepage" ];
+	"http://davidchavesfraga.com" -> "mailto:david.chaves@kuleuven.be" [ label = "foaf:mbox" ];
+	"https://www.upm.es/" -> "http://davidchavesfraga.com" [ label = "foaf:member" ];
+	"https://www.upm.es/" -> "https://www.upm.es/" [ label = "foaf:homepage" ];
+
+}
