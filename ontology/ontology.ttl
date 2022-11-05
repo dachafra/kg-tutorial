@@ -1,0 +1,52 @@
+ @prefix base: <http://example.ontology.com> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+base: a owl:Ontology ;
+    dc:creator "David Chaves" ;
+    dc:description "Ontology code created by Chowlk" ;
+    dc:title "My_Ontology" ;
+    owl:versionInfo "0.0.1" .
+
+foaf:family_name a owl:DatatypeProperty ;
+    rdfs:label "family_name" ;
+    rdfs:domain foaf:Person ;
+    rdfs:range xsd:string .
+
+foaf:givenName a owl:DatatypeProperty ;
+    rdfs:label "given name" ;
+    rdfs:domain foaf:Person ;
+    rdfs:range xsd:string .
+
+foaf:homepage a owl:DatatypeProperty ;
+    rdfs:label "homepage" ;
+    rdfs:domain foaf:Person .
+
+foaf:mbox a owl:DatatypeProperty ;
+    rdfs:label "mbox" ;
+    rdfs:domain foaf:Person .
+
+foaf:member a owl:ObjectProperty ;
+    rdfs:label "member" ;
+    rdfs:domain foaf:Organization ;
+    rdfs:range foaf:Person .
+
+foaf:name a owl:DatatypeProperty ;
+    rdfs:label "name" ;
+    rdfs:domain foaf:Organization ;
+    rdfs:range xsd:string .
+
+foaf:nick a owl:DatatypeProperty ;
+    rdfs:label "nick" ;
+    rdfs:domain foaf:Person ;
+    rdfs:range xsd:string .
+
+foaf:Organization a owl:Class ;
+    rdfs:label "Organization" .
+
+foaf:Person a owl:Class ;
+    rdfs:label "Person" .
+
