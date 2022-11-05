@@ -1,0 +1,34 @@
+{
+  "@context" : {
+    "member" : {
+      "@id" : "http://xmlns.com/foaf/0.1/member"
+    },
+    "img" : {
+      "@id" : "http://xmlns.com/foaf/0.1/img"
+    },
+    "Organization" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Organization"
+    },
+    "mbox" : {
+      "@id" : "http://xmlns.com/foaf/0.1/mbox"
+    },
+    "homepage" : {
+      "@id" : "http://xmlns.com/foaf/0.1/homepage"
+    },
+    "Person" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Person"
+    },
+    "givenName" : {
+      "@id" : "http://xmlns.com/foaf/0.1/givenName"
+    },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
+    "nick" : {
+      "@id" : "http://xmlns.com/foaf/0.1/nick"
+    },
+    "family_name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/family_name"
+    }
+  }
+}
