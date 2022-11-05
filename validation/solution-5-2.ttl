@@ -1,0 +1,79 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix ex:    <http://example.com/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+ex:PersonShape
+    a              sh:NodeShape ;
+    sh:targetClass foaf:Person ;
+    sh:property    ex:requiredGivenName;
+	sh:property    ex:requiredFamilyName;
+	sh:property    ex:requiredImg;
+	sh:property    ex:requiredMbox;
+    sh:property    ex:optionalHomePage ;
+	sh:property    ex:optionalNick .
+
+ex:requiredGivenName
+    a           sh:PropertyShape ;
+    rdfs:label  "given name"@en ;
+    sh:path     foaf:givenName ;
+    sh:nodeKind sh:Literal ;
+    sh:minCount 1 .
+
+ex:requiredFamilyName
+    a           sh:PropertyShape ;
+    sh:path     foaf:family_name ;
+    sh:nodeKind sh:Literal ;
+    sh:minCount 1 .
+
+ex:requiredImg
+    a           sh:PropertyShape ;
+    sh:path     foaf:img ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 .
+
+ex:requiredMbox
+    a           sh:PropertyShape ;
+    sh:path     foaf:mbox ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 .
+
+ex:optionalNick
+    a           sh:PropertyShape ;
+    sh:path     foaf:nick ;
+    sh:nodeKind sh:Literal .
+
+ex:optionalHomePage
+    a           sh:PropertyShape ;
+    sh:path     foaf:homepage ;
+    sh:nodeKind sh:IRI .
+
+
+ex:OrganizationShape
+    a              sh:NodeShape ;
+    sh:targetClass foaf:Organization ;
+    sh:property    ex:requiredName;
+	sh:property    ex:requiredMember;
+    sh:property    ex:requiredHomePage  .
+
+ex:requiredName
+    a           sh:PropertyShape ;
+    rdfs:label  "given name"@en ;
+    sh:path     foaf:name ;
+    sh:nodeKind sh:Literal ;
+    sh:minCount 1 .
+
+ex:requiredMember
+    a           sh:PropertyShape ;
+    rdfs:label  "given name"@en ;
+    sh:path     foaf:member ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 .
+
+ex:requiredHomePage
+    a           sh:PropertyShape ;
+    rdfs:label  "given name"@en ;
+    sh:path     foaf:homepage ;
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 .

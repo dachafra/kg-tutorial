@@ -1,0 +1,22 @@
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<https://kuleuven.be> a foaf:Organization ;
+  foaf:homepage <https://kuleuven.be> ;
+  foaf:name "KULeuven";
+  foaf:member <http://davidchavesfraga.com> .
+
+<https://www.upm.es/> a foaf:Organization ;
+  foaf:homepage <https://www.upm.es/> ;
+  foaf:name "Universidad Politécnica de Madrid";
+  foaf:member <http://davidchavesfraga.com> .
+
+<http://davidchavesfraga.com> a foaf:Person ;
+    foaf:family_name "David" ;
+  foaf:givenName  "Chaves-Fraga";
+    foaf:homepage   <http://davidchavesfraga.com> ;
+    foaf:homepage   <https://www.kuleuven.be/wieiswie/en/person/00152642>;
+    foaf:homepage   <http://www.upm.es/observatorio/vi/index.jsp?pageac=investigador.jsp&idInvestigador=26568>;
+    foaf:img        <http://davidchavesfraga.com/assets/images/dchaves.jpg> ;
+    foaf:mbox       <mailto:david.chaves@kuleuven.be> ;
+    foaf:nick       "dachafra", "dchavesf"  .
