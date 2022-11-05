@@ -1,0 +1,34 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"ex:requiredGivenName" -> "sh:Literal" [ label = "sh:nodeKind" ];
+	"ex:requiredGivenName" -> "foaf:givenName" [ label = "sh:path" ];
+	"ex:requiredHomePage" -> "sh:IRI" [ label = "sh:nodeKind" ];
+	"ex:requiredHomePage" -> "foaf:homepage" [ label = "sh:path" ];
+	"ex:requiredName" -> "sh:Literal" [ label = "sh:nodeKind" ];
+	"ex:requiredName" -> "foaf:name" [ label = "sh:path" ];
+	"ex:requiredImg" -> "sh:IRI" [ label = "sh:nodeKind" ];
+	"ex:requiredImg" -> "foaf:img" [ label = "sh:path" ];
+	"ex:PersonShape" -> "ex:optionalNick" [ label = "sh:property" ];
+	"ex:PersonShape" -> "ex:optionalHomePage" [ label = "sh:property" ];
+	"ex:PersonShape" -> "ex:requiredMbox" [ label = "sh:property" ];
+	"ex:PersonShape" -> "ex:requiredImg" [ label = "sh:property" ];
+	"ex:PersonShape" -> "ex:requiredFamilyName" [ label = "sh:property" ];
+	"ex:PersonShape" -> "ex:requiredGivenName" [ label = "sh:property" ];
+	"ex:PersonShape" -> "foaf:Person" [ label = "sh:targetClass" ];
+	"ex:optionalHomePage" -> "sh:IRI" [ label = "sh:nodeKind" ];
+	"ex:optionalHomePage" -> "foaf:homepage" [ label = "sh:path" ];
+	"ex:OrganizationShape" -> "ex:requiredHomePage" [ label = "sh:property" ];
+	"ex:OrganizationShape" -> "ex:requiredMember" [ label = "sh:property" ];
+	"ex:OrganizationShape" -> "ex:requiredName" [ label = "sh:property" ];
+	"ex:OrganizationShape" -> "foaf:Organization" [ label = "sh:targetClass" ];
+	"ex:requiredMember" -> "sh:IRI" [ label = "sh:nodeKind" ];
+	"ex:requiredMember" -> "foaf:member" [ label = "sh:path" ];
+	"ex:optionalNick" -> "sh:Literal" [ label = "sh:nodeKind" ];
+	"ex:optionalNick" -> "foaf:nick" [ label = "sh:path" ];
+	"ex:requiredFamilyName" -> "sh:Literal" [ label = "sh:nodeKind" ];
+	"ex:requiredFamilyName" -> "foaf:family_name" [ label = "sh:path" ];
+	"ex:requiredMbox" -> "sh:IRI" [ label = "sh:nodeKind" ];
+	"ex:requiredMbox" -> "foaf:mbox" [ label = "sh:path" ];
+
+}
