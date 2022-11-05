@@ -1,11 +1,11 @@
- @prefix base: <http://example.ontology.com> .
+@prefix base: <http://example.ontology.com/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-base: a owl:Ontology ;
+[] a owl:Ontology ;
     dc:creator "David Chaves" ;
     dc:description "Ontology code created by Chowlk" ;
     dc:title "My_Ontology" ;
