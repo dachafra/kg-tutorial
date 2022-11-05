@@ -1,0 +1,146 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/ns/shacl#minCount
+<http://www.w3.org/ns/shacl#minCount> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#nodeKind
+<http://www.w3.org/ns/shacl#nodeKind> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#path
+<http://www.w3.org/ns/shacl#path> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#property
+<http://www.w3.org/ns/shacl#property> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/shacl#targetClass
+<http://www.w3.org/ns/shacl#targetClass> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/ns/shacl#NodeShape
+<http://www.w3.org/ns/shacl#NodeShape> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/shacl#PropertyShape
+<http://www.w3.org/ns/shacl#PropertyShape> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.com/OrganizationShape
+<http://example.com/OrganizationShape> rdf:type owl:NamedIndividual ,
+                                                <http://www.w3.org/ns/shacl#NodeShape> ;
+                                       <http://www.w3.org/ns/shacl#property> <http://example.com/requiredHomePage> ,
+                                                                             <http://example.com/requiredMember> ,
+                                                                             <http://example.com/requiredName> ;
+                                       <http://www.w3.org/ns/shacl#targetClass> <http://xmlns.com/foaf/0.1/Organization> .
+
+
+###  http://example.com/PersonShape
+<http://example.com/PersonShape> rdf:type owl:NamedIndividual ,
+                                          <http://www.w3.org/ns/shacl#NodeShape> ;
+                                 <http://www.w3.org/ns/shacl#property> <http://example.com/optionalHomePage> ,
+                                                                       <http://example.com/optionalNick> ,
+                                                                       <http://example.com/requiredFamilyName> ,
+                                                                       <http://example.com/requiredGivenName> ,
+                                                                       <http://example.com/requiredImg> ,
+                                                                       <http://example.com/requiredMbox> ;
+                                 <http://www.w3.org/ns/shacl#targetClass> <http://xmlns.com/foaf/0.1/Person> .
+
+
+###  http://example.com/optionalHomePage
+<http://example.com/optionalHomePage> rdf:type owl:NamedIndividual ,
+                                               <http://www.w3.org/ns/shacl#PropertyShape> ;
+                                      <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ;
+                                      <http://www.w3.org/ns/shacl#path> <http://xmlns.com/foaf/0.1/homepage> .
+
+
+###  http://example.com/optionalNick
+<http://example.com/optionalNick> rdf:type owl:NamedIndividual ,
+                                           <http://www.w3.org/ns/shacl#PropertyShape> ;
+                                  <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> ;
+                                  <http://www.w3.org/ns/shacl#path> <http://xmlns.com/foaf/0.1/nick> .
+
+
+###  http://example.com/requiredFamilyName
+<http://example.com/requiredFamilyName> rdf:type owl:NamedIndividual ,
+                                                 <http://www.w3.org/ns/shacl#PropertyShape> ;
+                                        <http://www.w3.org/ns/shacl#minCount> 1 ;
+                                        <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> ;
+                                        <http://www.w3.org/ns/shacl#path> <http://xmlns.com/foaf/0.1/family_name> .
+
+
+###  http://example.com/requiredGivenName
+<http://example.com/requiredGivenName> rdf:type owl:NamedIndividual ,
+                                                <http://www.w3.org/ns/shacl#PropertyShape> ;
+                                       rdfs:label "given name"@en ;
+                                       <http://www.w3.org/ns/shacl#minCount> 1 ;
+                                       <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> ;
+                                       <http://www.w3.org/ns/shacl#path> <http://xmlns.com/foaf/0.1/givenName> .
+
+
+###  http://example.com/requiredHomePage
+<http://example.com/requiredHomePage> rdf:type owl:NamedIndividual ,
+                                               <http://www.w3.org/ns/shacl#PropertyShape> ;
+                                      rdfs:label "given name"@en ;
+                                      <http://www.w3.org/ns/shacl#minCount> 1 ;
+                                      <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ;
+                                      <http://www.w3.org/ns/shacl#path> <http://xmlns.com/foaf/0.1/homepage> .
+
+
+###  http://example.com/requiredImg
+<http://example.com/requiredImg> rdf:type owl:NamedIndividual ,
+                                          <http://www.w3.org/ns/shacl#PropertyShape> ;
+                                 <http://www.w3.org/ns/shacl#minCount> 1 ;
+                                 <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ;
+                                 <http://www.w3.org/ns/shacl#path> <http://xmlns.com/foaf/0.1/img> .
+
+
+###  http://example.com/requiredMbox
+<http://example.com/requiredMbox> rdf:type owl:NamedIndividual ,
+                                           <http://www.w3.org/ns/shacl#PropertyShape> ;
+                                  <http://www.w3.org/ns/shacl#minCount> 1 ;
+                                  <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ;
+                                  <http://www.w3.org/ns/shacl#path> <http://xmlns.com/foaf/0.1/mbox> .
+
+
+###  http://example.com/requiredMember
+<http://example.com/requiredMember> rdf:type owl:NamedIndividual ,
+                                             <http://www.w3.org/ns/shacl#PropertyShape> ;
+                                    rdfs:label "given name"@en ;
+                                    <http://www.w3.org/ns/shacl#minCount> 1 ;
+                                    <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#IRI> ;
+                                    <http://www.w3.org/ns/shacl#path> <http://xmlns.com/foaf/0.1/member> .
+
+
+###  http://example.com/requiredName
+<http://example.com/requiredName> rdf:type owl:NamedIndividual ,
+                                           <http://www.w3.org/ns/shacl#PropertyShape> ;
+                                  rdfs:label "given name"@en ;
+                                  <http://www.w3.org/ns/shacl#minCount> 1 ;
+                                  <http://www.w3.org/ns/shacl#nodeKind> <http://www.w3.org/ns/shacl#Literal> ;
+                                  <http://www.w3.org/ns/shacl#path> <http://xmlns.com/foaf/0.1/name> .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

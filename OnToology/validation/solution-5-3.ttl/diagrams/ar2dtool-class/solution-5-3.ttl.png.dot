@@ -1,0 +1,46 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+	"ex:personToOrgShape" -> "foaf:Person" [ label = "sh:class" ];
+	"ex:personToOrgShape" -> "foaf:member" [ label = "sh:targetObjectsOf" ];
+	"ex:requiredGivenName" -> "xsd:string" [ label = "sh:datatype" ];
+	"ex:requiredGivenName" -> "sh:Literal" [ label = "sh:nodeKind" ];
+	"ex:requiredGivenName" -> "foaf:givenName" [ label = "sh:path" ];
+	"ex:requiredHomePage" -> "sh:IRI" [ label = "sh:nodeKind" ];
+	"ex:requiredHomePage" -> "foaf:homepage" [ label = "sh:path" ];
+	"ex:requiredName" -> "xsd:string" [ label = "sh:datatype" ];
+	"ex:requiredName" -> "sh:Literal" [ label = "sh:nodeKind" ];
+	"ex:requiredName" -> "foaf:name" [ label = "sh:path" ];
+	"ex:requiredImg" -> "sh:IRI" [ label = "sh:nodeKind" ];
+	"ex:requiredImg" -> "foaf:img" [ label = "sh:path" ];
+	"ex:PersonShape" -> "ex:optionalNick" [ label = "sh:property" ];
+	"ex:PersonShape" -> "ex:optionalHomePage" [ label = "sh:property" ];
+	"ex:PersonShape" -> "ex:requiredMbox" [ label = "sh:property" ];
+	"ex:PersonShape" -> "ex:requiredImg" [ label = "sh:property" ];
+	"ex:PersonShape" -> "ex:requiredFamilyName" [ label = "sh:property" ];
+	"ex:PersonShape" -> "ex:requiredGivenName" [ label = "sh:property" ];
+	"ex:PersonShape" -> "foaf:Person" [ label = "sh:targetClass" ];
+	"ex:optionalHomePage" -> "sh:IRI" [ label = "sh:nodeKind" ];
+	"ex:optionalHomePage" -> "foaf:homepage" [ label = "sh:path" ];
+	"ex:memberPath" -> "53e729d2:18447498a4d:-7ffc" [ label = "sh:path" ];
+	"ex:OrganizationShape" -> "ex:requiredHomePage" [ label = "sh:property" ];
+	"ex:OrganizationShape" -> "ex:memberPath" [ label = "sh:property" ];
+	"ex:OrganizationShape" -> "ex:requiredMember" [ label = "sh:property" ];
+	"ex:OrganizationShape" -> "ex:requiredName" [ label = "sh:property" ];
+	"ex:OrganizationShape" -> "foaf:Organization" [ label = "sh:targetClass" ];
+	"ex:requiredMember" -> "sh:IRI" [ label = "sh:nodeKind" ];
+	"ex:requiredMember" -> "foaf:member" [ label = "sh:path" ];
+	"NULL" -> "53e729d2:18447498a4d:-7ffb" [ label = "rdf:rest" ];
+	"NULL" -> "foaf:member" [ label = "rdf:first" ];
+	"NULL" -> "rdf:nil" [ label = "rdf:rest" ];
+	"NULL" -> "foaf:homepage" [ label = "rdf:first" ];
+	"ex:optionalNick" -> "xsd:string" [ label = "sh:datatype" ];
+	"ex:optionalNick" -> "sh:Literal" [ label = "sh:nodeKind" ];
+	"ex:optionalNick" -> "foaf:nick" [ label = "sh:path" ];
+	"ex:requiredFamilyName" -> "xsd:string" [ label = "sh:datatype" ];
+	"ex:requiredFamilyName" -> "sh:Literal" [ label = "sh:nodeKind" ];
+	"ex:requiredFamilyName" -> "foaf:family_name" [ label = "sh:path" ];
+	"ex:requiredMbox" -> "sh:IRI" [ label = "sh:nodeKind" ];
+	"ex:requiredMbox" -> "foaf:mbox" [ label = "sh:path" ];
+
+}

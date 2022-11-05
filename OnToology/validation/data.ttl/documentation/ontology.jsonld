@@ -1,0 +1,94 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "http://davidchavesfraga.com",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
+  "http://xmlns.com/foaf/0.1/family_name" : [ {
+    "@value" : "David"
+  } ],
+  "http://xmlns.com/foaf/0.1/givenName" : [ {
+    "@value" : "Chaves-Fraga"
+  } ],
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "http://davidchavesfraga.com"
+  }, {
+    "@id" : "http://www.upm.es/observatorio/vi/index.jsp?pageac=investigador.jsp&idInvestigador=26568"
+  }, {
+    "@id" : "https://www.kuleuven.be/wieiswie/en/person/00152642"
+  } ],
+  "http://xmlns.com/foaf/0.1/img" : [ {
+    "@id" : "http://davidchavesfraga.com/assets/images/dchaves.jpg"
+  } ],
+  "http://xmlns.com/foaf/0.1/mbox" : [ {
+    "@id" : "mailto:david.chaves@kuleuven.be"
+  } ],
+  "http://xmlns.com/foaf/0.1/nick" : [ {
+    "@value" : "dachafra"
+  }, {
+    "@value" : "dchavesf"
+  } ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/Organization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/family_name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/givenName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/homepage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/img",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/mbox",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/member",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/nick",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://kuleuven.be",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Organization"
+  } ],
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://kuleuven.be"
+  } ],
+  "http://xmlns.com/foaf/0.1/member" : [ {
+    "@id" : "http://davidchavesfraga.com"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "KULeuven"
+  } ]
+}, {
+  "@id" : "https://www.upm.es/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Organization"
+  } ],
+  "http://xmlns.com/foaf/0.1/homepage" : [ {
+    "@id" : "https://www.upm.es/"
+  } ],
+  "http://xmlns.com/foaf/0.1/member" : [ {
+    "@id" : "http://davidchavesfraga.com"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Universidad Politécnica de Madrid"
+  } ]
+} ]
