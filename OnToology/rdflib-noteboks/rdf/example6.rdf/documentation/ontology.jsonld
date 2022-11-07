@@ -1,0 +1,97 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "http://somewhere#JaneSmith",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://somewhere#http://www.w3.org/2001/vcard-rdf/3.0/FN" : [ {
+    "@value" : "jane Smith"
+  } ],
+  "http://somewhere#http://www.w3.org/2001/vcard-rdf/3.0/Family" : [ {
+    "@value" : "Smith"
+  } ],
+  "http://somewhere#http://www.w3.org/2001/vcard-rdf/3.0/Given" : [ {
+    "@value" : "Jane"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://somewhere#Researcher"
+  } ]
+}, {
+  "@id" : "http://somewhere#JohnSmith",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://somewhere#http://www.w3.org/2001/vcard-rdf/3.0/FN" : [ {
+    "@value" : "John Smith"
+  } ],
+  "http://somewhere#http://www.w3.org/2001/vcard-rdf/3.0/Family" : [ {
+    "@value" : "Smith"
+  } ],
+  "http://somewhere#http://www.w3.org/2001/vcard-rdf/3.0/Given" : [ {
+    "@value" : "John"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://somewhere#Person"
+  } ]
+}, {
+  "@id" : "http://somewhere#Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://somewhere#PhDstudent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://somewhere#Researcher"
+  } ]
+}, {
+  "@id" : "http://somewhere#Researcher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://somewhere#Person"
+  } ]
+}, {
+  "@id" : "http://somewhere#SaraJones",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://somewhere#http://www.w3.org/2001/vcard-rdf/3.0/FN" : [ {
+    "@value" : "Sara Jones"
+  } ],
+  "http://somewhere#http://www.w3.org/2001/vcard-rdf/3.0/Family" : [ {
+    "@value" : "Jones"
+  } ],
+  "http://somewhere#http://www.w3.org/2001/vcard-rdf/3.0/Given" : [ {
+    "@value" : "Sara"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://somewhere#Person"
+  } ]
+}, {
+  "@id" : "http://somewhere#UPM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://somewhere#University"
+  } ]
+}, {
+  "@id" : "http://somewhere#University",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://somewhere#http://www.w3.org/2001/vcard-rdf/3.0/FN",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://somewhere#http://www.w3.org/2001/vcard-rdf/3.0/Family",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://somewhere#http://www.w3.org/2001/vcard-rdf/3.0/Given",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2000/01/rdf-schema#Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+} ]

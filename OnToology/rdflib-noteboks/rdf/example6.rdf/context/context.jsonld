@@ -1,0 +1,31 @@
+{
+  "@context" : {
+    "FN" : {
+      "@id" : "http://somewhere#http://www.w3.org/2001/vcard-rdf/3.0/FN",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Family" : {
+      "@id" : "http://somewhere#http://www.w3.org/2001/vcard-rdf/3.0/Family",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Given" : {
+      "@id" : "http://somewhere#http://www.w3.org/2001/vcard-rdf/3.0/Given",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Person" : {
+      "@id" : "http://somewhere#Person"
+    },
+    "PhDstudent" : {
+      "@id" : "http://somewhere#PhDstudent"
+    },
+    "Researcher" : {
+      "@id" : "http://somewhere#Researcher"
+    },
+    "Property" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#Property"
+    },
+    "University" : {
+      "@id" : "http://somewhere#University"
+    }
+  }
+}
