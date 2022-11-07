@@ -20,7 +20,7 @@ mappings:
       - [a, foaf:Person]
       - [foaf:nick, $(nick)]
       - [foaf:homepage, $(homepage)~iri ]
-      - [foaf:email,$(email)~iri ]
+      - [foaf:email,$(email)]
       - [foaf:family_name, $(name)]
       - [foaf:givenName,$(surname) ]
 
